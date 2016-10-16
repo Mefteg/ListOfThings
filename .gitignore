@@ -1,6 +1,8 @@
 ### List Of Things ###
 
 typings/
+app/**/*.js
+app/**/*.map
 
 ### Node ###
 # Logs
