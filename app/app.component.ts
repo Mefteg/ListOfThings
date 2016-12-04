@@ -1,6 +1,7 @@
 import { Component }	from '@angular/core';
 
-import { List }			from './list/list';
+import { Item }	      from './item/item';
+import { List }	      from './list/list';
 
 @Component({
     selector:		'list-of-things',
@@ -8,7 +9,19 @@ import { List }			from './list/list';
 })
 export class AppComponent {
 	lists = [
-	new List(0, 'Test'),
-	new List(3, 'Coucou')
+  	new List(0, 'Test'),
+  	new List(3, 'Coucou')
 	];
+
+  selectedList: List;
+
+  onAddItem(): void {
+    if (this.selectedList) {
+      this.selectedList.items.push(new Item("urlurl", "content!"));
+    }
+  }
+
+  onSelect(list: List): void {
+    this.selectedList = list;
+  }
 }

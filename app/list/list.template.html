@@ -1,0 +1,8 @@
+<ul>
+  <div *ngIf="list.items.length == 0">
+    No items.
+  </div>
+	<li *ngFor="let item of list.items">
+    <item [item]="item"></item>
+	</li>
+</ul>

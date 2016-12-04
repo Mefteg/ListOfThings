@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-signin-client_id" content="43540731303-lqk67ldle9ltq0chtm36vm78dq9he80p.apps.googleusercontent.com">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.0/build/pure-min.css">
     <link rel="stylesheet" href="styles.css">
     <!-- 1. Load libraries -->
      <!-- Polyfill(s) for older browsers -->
@@ -19,12 +20,20 @@
   </head>
   <!-- 3. Display the application -->
   <body>
-    <h1>List Of Things</h1>
-    <div>
-      <div class="g-signin2" data-onsuccess="onSignIn"></div>
-      <a href="#" onclick="signOut();">Sign out</a>
+    <header>
+      <div class="menu pure-g">
+        <div class="pure-u-4-5">
+          <h1>List Of Things</h1>
+        </div>
+        <div class="pure-u-1-5">
+          <div class="g-signin2" data-onsuccess="onSignIn"></div>
+          <a href="#" onclick="signOut();">Sign out</a>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+      <list-of-things>Loading...</list-of-things>
     </div>
-    <list-of-things>Loading...</list-of-things>
   </body>
 
   <!-- Google Sign-in -->

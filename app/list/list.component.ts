@@ -1,6 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { List }	      from './list';
+
 @Component({
     selector: 'list',
-    template: '<u>A List!</u><li>element 0</li>'
+    templateUrl:	'/app/list/list.template.html'
 })
-export class ListComponent { }
+export class ListComponent {
+  @Input()
+  list: List;
+}
